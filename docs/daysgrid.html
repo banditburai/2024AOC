@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advent of Code 2024 Solutions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --background: #0f172a;  /* Darker blue background */
+            --foreground: #f1f5f9;
+            --muted: #1e293b;
+            --primary: #38bdf8;     /* Bright blue for snow/ice theme */
+            --accent: #f43f5e;      /* Festive red */
+            --gold: #fbbf24;        /* Holiday gold */
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background: var(--background);
+            color: var(--foreground);
+            background-image: 
+                radial-gradient(circle at 50% 50%, #ffffff03 0%, transparent 10%),
+                radial-gradient(circle at 25% 25%, #ffffff03 0%, transparent 10%);
+            background-size: 24px 24px;
+            min-height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            text-shadow: 0 0 10px var(--primary);
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--gold);
+        }
+        
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+            perspective: 1000px;
+        }
+        
+        .day-link {
+            padding: 1.5rem 1rem;
+            border: 1px solid var(--muted);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--foreground);
+            text-align: center;
+            transition: all 0.3s;
+            background: var(--muted);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .day-link:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px) rotateX(10deg);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .day-link::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: all 0.3s;
+        }
+        
+        .day-link:hover::before {
+            animation: shine 1.5s infinite;
+        }
+        
+        .completed {
+            background: linear-gradient(135deg, var(--muted), var(--primary));
+            border: none;
+        }
+        
+        .pending {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;  /* Prevents any hover effects */
+            background: var(--muted);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .pending .day-number {
+            color: var(--foreground);  /* Less prominent color for pending days */
+        }
+        
+        .day-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .day-title {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid var(--muted);
+        }
+        
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @keyframes shine {
+            0% {
+                transform: rotate(45deg) translateX(-100%);
+            }
+            100% {
+                transform: rotate(45deg) translateX(100%);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .days-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>❄️ Advent of Code 2024 ❄️</h1>
+    <p class="intro">25 Days of Making My Computer Do Math While I Drink Hot Cocoa ☕</p>
+    
+    <div class="days-grid">
+        <a href="day1.html" class="day-link completed">
+            <div class="day-number">1</div>
+            <div class="day-title">Sorting & Distance</div>
+        </a>
+        
+        <div class="day-link pending">
+            <div class="day-number">2</div>
+            <div class="day-title">Coming Soon</div>
+        </div>
+        
+        <div class="day-link pending">
+            <div class="day-number">3</div>
+            <div class="day-title">Coming Soon</div>
+        </div>
+        
+        <!-- Add days 4-24 here -->
+        
+        <div class="day-link pending">
+            <div class="day-number">25</div>
+            <div class="day-title">Coming Soon</div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with ❄️ by <a href="https://github.com/banditburai">firefly</a></p>
+        <p>View the <a href="https://github.com/banditburai/2024AOC">source code</a></p>
+    </footer>
+</body>
+</html>
