@@ -1,0 +1,417 @@
+
+<!doctype html>
+<html>
+  <head>
+    <title>FastHTML page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="https://unpkg.com/htmx.org@next/dist/htmx.min.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/fasthtml-js@1.0.4/fasthtml.js"></script><script src="https://cdn.jsdelivr.net/gh/answerdotai/surreal@main/surreal.js"></script><script src="https://cdn.jsdelivr.net/gh/gnat/css-scope-inline@main/script.js"></script><script src="https://unpkg.com/htmx-ext-ws/ws.js"></script>   </head>
+  <body>
+    <div hx-trigger="load" hx-ext="ws" ws-connect="/ws" id="_dest">
+<main id="_DEhZAZRGSV_vuwo_SjgyIA" class="container">         <h1>Day 1!</h1>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>         <style>
+       body {
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+           max-width: 800px;
+           margin: 2rem auto;
+           padding: 0 1rem;
+           line-height: 1.5;
+       }
+       
+       pre {
+           background: #f6f8fa;
+           padding: 1rem;
+           border-radius: 4px;
+           overflow-x: auto;
+       }
+       
+       .example {
+           margin: 1rem 0;
+           padding: 1rem;
+           border: 1px solid #e1e4e8;
+           border-radius: 6px;
+       }
+       
+       .solution {
+           margin-top: 2rem;
+           padding: 1.5rem;
+           background: #f8f9fa;
+           border-radius: 6px;
+       }
+       
+       table {
+           border-collapse: collapse;
+           width: 100%;
+           margin: 1rem 0;
+       }
+       
+       th, td {
+           padding: 0.5rem;
+           border: 1px solid #e1e4e8;
+           text-align: left;
+       }
+       
+       th {
+           background: #f6f8fa;
+       }
+        .example-table {
+           margin: 1rem 0;
+           width: auto;
+           min-width: 50%;
+       }
+       
+       .example-table th, .example-table td {
+           padding: 0.5rem 1rem;
+           text-align: right;
+       }
+       
+       .example-table tr:last-child {
+           font-weight: bold;
+           border-top: 2px solid #e1e4e8;
+       }
+       
+       .solution {
+           margin: 1rem 0 2rem 0;
+           padding: 1.5rem;
+           background: #f8f9fa;
+           border-radius: 6px;
+           border-left: 4px solid #0366d6;
+       }
+       
+       .solution h3 {
+           margin-top: 0;
+           color: #0366d6;
+       }
+         
+       .recommendation {
+           margin: 2rem 0;
+           padding: 1.5rem;
+           background: #f0fff4;
+           border-radius: 6px;
+           border-left: 4px solid #38a169;
+       }
+       
+       .recommendation h3 {
+           color: #38a169;
+           margin-top: 0;
+       }
+       
+       li {
+           margin: 0.5rem 0;
+       }
+   </style>
+        <style>
+       .copy-to-clipboard-button {
+           position: relative;
+           display: inline-flex;
+           align-items: center;
+           justify-content: center;
+           width: 2.5em;
+           height: 2.5em;
+           padding: 0.25em;
+           color: #777;
+           border: none;
+           background: none;
+           cursor: pointer;
+       }
+
+       .copy-to-clipboard-button > span {
+           position: absolute;
+           width: 1px;
+           height: 1px;
+           padding: 0;
+           margin: -1px;
+           overflow: hidden;
+           clip: rect(0, 0, 0, 0);
+           white-space: nowrap;
+           border: 0;
+       }
+
+       .copy-to-clipboard-button::before {
+           content: '';
+           width: 1.25em;
+           height: 1.25em;
+           background: currentColor;
+           /* clipboard icon as SVG mask */
+           mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 1H4C3 1 2 2 2 3v14h2V3h12V1zm3 4H8C7 5 6 6 6 7v14c0 1 1 2 2 2h11c1 0 2-1 2-2V7c0-1-1-2-2-2zm0 16H8V7h11v14z'/%3E%3C/svg%3E");
+           mask-repeat: no-repeat;
+           mask-position: center;
+           -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 1H4C3 1 2 2 2 3v14h2V3h12V1zm3 4H8C7 5 6 6 6 7v14c0 1 1 2 2 2h11c1 0 2-1 2-2V7c0-1-1-2-2-2zm0 16H8V7h11v14z'/%3E%3C/svg%3E");
+           -webkit-mask-repeat: no-repeat;
+           -webkit-mask-position: center;
+       }
+
+       .copy-to-clipboard-button:hover {
+           color: #333;
+       }
+
+       /* Success state */
+       .copy-to-clipboard-button[data-copy-state='copy-success']::before {
+           mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z'/%3E%3C/svg%3E");
+           -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z'/%3E%3C/svg%3E");
+           color: #4caf50;
+       }
+   </style>
+        <h1>Day 1: Sorting and Distance Calculation</h1>
+        <h2>Problem Statement</h2>
+        <p>Given two columns of numbers in a string format, we need to:</p>
+        <ul>
+          <li>Sort both columns independently from lowest to highest</li>
+          <li>Calculate the absolute difference between corresponding numbers</li>
+          <li>Sum up all the differences</li>
+        </ul>
+        <h2>Example Input</h2>
+<pre>58990   83989
+26183   15707
+48195   12659
+20176   26012
+26730   42699</pre>         <h2>Why Do We Need Sorting?</h2>
+        <p>Let&#x27;s examine why sorting is necessary with a small example:</p>
+        <div class="example">
+          <h3>Example with Two Different Matchings</h3>
+          <table class="example-table">
+            <tr>
+              <th>Left</th>
+              <th>Right</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>2</td>
+            </tr>
+          </table>
+          <h4>Matching 1: After Sorting Both Lists</h4>
+          <table class="example-table">
+            <tr>
+              <th>Left</th>
+              <th>Right</th>
+              <th>Difference</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>|diff| = 1</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>10</td>
+              <td>|diff| = 5</td>
+            </tr>
+            <tr>
+              <td colspan="2">Total:</td>
+              <td>6</td>
+            </tr>
+          </table>
+          <h4>Matching 2: Without Sorting</h4>
+          <table class="example-table">
+            <tr>
+              <th>Left</th>
+              <th>Right</th>
+              <th>Difference</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>10</td>
+              <td>|diff| = 9</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>2</td>
+              <td>|diff| = 3</td>
+            </tr>
+            <tr>
+              <td colspan="2">Total:</td>
+              <td>12</td>
+            </tr>
+          </table>
+          <p>We see that sorting both lists gives us the minimum total difference. Any other matching would result in a larger total.</p>
+        </div>
+        <div class="solution">
+          <h3>Approach 1: Single Pass with List Comprehension</h3>
+<pre class="language-python"><code class="language-python">
+left, right = zip(*(map(int, line.split()) 
+   for line in input.splitlines() if line.strip()))
+left_sorted = sorted(left)
+right_sorted = sorted(right)
+</code></pre>           <ul>
+            <li>✓ Clean, one-liner solution</li>
+            <li>✓ Uses efficient built-in functions</li>
+            <li>✓ Good readability</li>
+            <li>⚠ Creates intermediate lists in memory</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Approach 2: Direct to Arrays with NumPy</h3>
+<pre class="language-python"><code class="language-python">
+import numpy as np
+# Convert directly to 2D array and then split columns
+arr = np.array([line.split() for line in input.splitlines() 
+   if line.strip()], dtype=int)
+left_sorted = np.sort(arr[:, 0])
+right_sorted = np.sort(arr[:, 1])
+</code></pre>           <ul>
+            <li>✓ Very efficient for large datasets</li>
+            <li>✓ Vectorized operations</li>
+            <li>✓ Good for numerical computations</li>
+            <li>⚠ Requires NumPy dependency</li>
+            <li>⚠ Overhead for small datasets</li>
+            <li>⚠ Additional memory for array conversion</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Approach 3: Generator-based parsing</h3>
+<pre class="language-python"><code class="language-python">
+def parse_numbers(input_str):
+   for line in input_str.splitlines():
+       if line.strip():
+           l, r = line.split()
+           yield int(l), int(r)
+
+left, right = zip(*parse_numbers(input))
+left_sorted = sorted(left)
+right_sorted = sorted(right)
+</code></pre>           <ul>
+            <li>✓ Memory efficient for large files</li>
+            <li>✓ Lazy evaluation</li>
+            <li>✓ Good for streaming data</li>
+            <li>⚠ More complex implementation</li>
+            <li>⚠ Still needs memory for final sorting</li>
+            <li>⚠ Multiple passes through data</li>
+          </ul>
+        </div>
+        <div class="recommendation">
+          <h3>Recommendation</h3>
+          <p>For parsing and sorting the input data, Approach 1 (List Comprehension) is recommended for most cases because:</p>
+          <ul>
+            <li>The input size is moderate (fits easily in memory)</li>
+            <li>Code clarity is important for maintenance</li>
+            <li>No external dependencies required</li>
+            <li>Performance is good enough for typical use cases</li>
+          </ul>
+          <p>Consider alternatives when:</p>
+          <ul>
+            <li>→ Working with very large datasets (Approach 2)</li>
+            <li>→ Memory is severely constrained (Approach 3)</li>
+            <li>→ Already using NumPy in your project (Approach 2)</li>
+            <li>→ Need to process data in chunks (Approach 3)</li>
+          </ul>
+        </div>
+        <h2>Calculating the Total Distance</h2>
+        <p>Once we have our sorted lists, we need to calculate the sum of absolute differences between corresponding elements. Here are several approaches:</p>
+        <div class="solution">
+          <h3>Approach 1: List Comprehension</h3>
+<pre class="language-python"><code class="language-python">total = sum(abs(l - r) for l, r in zip(left_sorted, right_sorted))</code></pre>           <ul>
+            <li>✓ Clean, Pythonic syntax</li>
+            <li>✓ Good readability</li>
+            <li>✓ Memory efficient (generates values one at a time)</li>
+            <li>⚠ Creates generator object in memory</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Approach 2: NumPy Vectorization</h3>
+<pre class="language-python"><code class="language-python">import numpy as np
+total = np.abs(np.array(left_sorted) - np.array(right_sorted)).sum()</code></pre>           <ul>
+            <li>✓ Very fast for large arrays due to vectorization</li>
+            <li>✓ Clean, mathematical syntax</li>
+            <li>⚠ Overhead of converting to numpy arrays</li>
+            <li>⚠ Only worth it for large datasets (&gt;10k elements)</li>
+            <li>⚠ Additional dependency required</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Approach 3: Map with Lambda</h3>
+<pre class="language-python"><code class="language-python">total = sum(map(lambda x: abs(x[0] - x[1]), 
+   zip(left_sorted, right_sorted)))</code></pre>           <ul>
+            <li>✓ Memory efficient (lazy evaluation)</li>
+            <li>✓ No intermediate list created</li>
+            <li>⚠ Less readable than list comprehension</li>
+            <li>⚠ Lambda functions can be harder to debug</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Approach 4: Traditional For Loop</h3>
+<pre class="language-python"><code class="language-python">total = 0
+for l, r in zip(left_sorted, right_sorted):
+   total += abs(l - r)</code></pre>           <ul>
+            <li>✓ Most explicit and easiest to understand</li>
+            <li>✓ Good for debugging (can add print statements)</li>
+            <li>✓ No hidden memory operations</li>
+            <li>⚠ More verbose than other approaches</li>
+            <li>⚠ Slightly slower for large lists</li>
+          </ul>
+        </div>
+        <div class="recommendation">
+          <h3>Recommendation</h3>
+          <p>For this specific problem, Approach 1 (list comprehension) is likely the best choice because:</p>
+          <ul>
+            <li>The data size is moderate (no need for NumPy optimization)</li>
+            <li>The operation is simple (one-liner is appropriate)</li>
+            <li>Code readability is important</li>
+            <li>We don&#x27;t need debugging capabilities</li>
+          </ul>
+          <p>If you&#x27;re dealing with very large datasets (millions of entries), 
+           consider Approach 2 with NumPy. For debugging or educational purposes, 
+           Approach 4 might be more appropriate.</p>
+        </div>
+        <h2>Calculating Similarity Score</h2>
+        <p>After finding the minimum total distance, we need to calculate a similarity score. 
+       This score is based on how many times each number from the left list appears in the right list.</p>
+        <div class="solution">
+          <h3>Step 1: Create Set for Efficient Lookup</h3>
+<pre class="language-python"><code class="language-python">left_set = set(left_sorted)</code></pre>           <ul>
+            <li>✓ Converts list to set for O(1) lookups</li>
+            <li>✓ Removes duplicates automatically</li>
+            <li>✓ Memory efficient for large datasets</li>
+            <li>⚠ Order is not preserved (but not needed here)</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Step 2: Count Matching Numbers</h3>
+<pre class="language-python"><code class="language-python">matches = {num: 0 for num in left_set}  # initialize all counts to 0
+for num in right_sorted:
+   if num in left_set:
+       matches[num] += 1</code></pre>           <ul>
+            <li>✓ Initialize counts to zero for all left numbers</li>
+            <li>✓ Efficiently count occurrences in right list</li>
+            <li>✓ Only counts numbers that exist in left list</li>
+            <li>⚠ Requires additional memory for dictionary</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Step 3: Filter Non-Zero Matches</h3>
+<pre class="language-python"><code class="language-python"># show non zero matches
+non_zero_matches = {k: v for k, v in matches.items() if v &gt; 0}</code></pre>           <ul>
+            <li>✓ Removes numbers with zero matches</li>
+            <li>✓ Creates cleaner dictionary for final calculation</li>
+            <li>✓ Makes debugging easier</li>
+            <li>⚠ Creates new dictionary in memory</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <h3>Step 4: Calculate Similarity Score</h3>
+<pre class="language-python"><code class="language-python">similarity_score = sum(num * count for num, count in non_zero_matches.items())</code></pre>           <ul>
+            <li>✓ Multiplies each number by its count</li>
+            <li>✓ Sums all products for final score</li>
+            <li>✓ Uses generator expression for memory efficiency</li>
+            <li>✓ Only processes numbers that had matches</li>
+          </ul>
+        </div>
+        <div class="recommendation">
+          <h3>Why This Approach?</h3>
+          <p>This multi-step approach provides an efficient way to calculate similarity:</p>
+          <ul>
+            <li>Using a set makes lookups very fast</li>
+            <li>Dictionary keeps track of counts without multiple passes</li>
+            <li>Filtering non-zero matches reduces final calculation work</li>
+            <li>Generator expression in final sum keeps memory usage low</li>
+          </ul>
+        </div>
+</main>     </div>
+  </body>
+</html>
